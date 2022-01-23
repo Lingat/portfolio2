@@ -1,38 +1,55 @@
-.App {
-  text-align: center;
+* {
+  font-family: 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  color: black;
+  background: #ECECEC;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html, body {margin: 0; height: 100%; overflow: hidden}
+
+.title:hover .fullName {
+  opacity: 1;
+  transition: font-size 0.3s, opacity 0.3s linear;
+  font-size: 35px;
+}
+.fullName:hover {
+  opacity: 1;
+  transition: opacity 0.3s linear;
+}
+.fullName {
+  transition: font-size 0.3s, display 0s, opacity 0.3s linear;
+  opacity: 0;
+  width: 0px;
+  font-size: 0px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.title{
+  opacity: 1;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.link {
+  width: 100px;
+  transition: 0.3s;
+  cursor: pointer;
+  transition: transform 250ms;
+
+}
+.link:hover  {
+  transition: 0.3;
+  transform: translateX(10px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+  font-size: 35px;
+}
+
+h2 {
+  font-size: 30px;
 }

@@ -1,28 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react';
+import { useRef } from 'react';
 import styled, { keyframes } from 'styled-components';
-import { tada } from 'react-animations';
+import Home from './Pages/Home'
+import Portfolio from './Pages/Portfolio'
+import Contact from './Pages/Contact'
 
-const someAnimation = keyframes`${tada}`;
-
-const BouncyDiv = styled.div`
-  animation: 2s ${someAnimation};
-  text-align: center
-
-`;
 
 
 function App() {
+   const portfolioRef = useRef(null);
+   const contactRef = useRef(null);
+
+   const portfolioScroll = () => portfolioRef.current.scrollIntoView({behavior: "smooth"})
+   const contactScroll = () => contactRef.current.scrollIntoView({behavior: "smooth"})  
   return (
  
- <div>
-  <BouncyDiv>
-       <h1>Portfolio!</h1>
-       <h2> Hello </h2>
-    </BouncyDiv>
-    </div>
-      
+    <>
+
+  <Home portfolioScroll={portfolioScroll} contactScroll={contactScroll} ></Home>
+
+    </>  
   );
 }
 
