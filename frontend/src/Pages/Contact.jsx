@@ -9,8 +9,8 @@ const ContactDiv = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-min-height:100vh;
-height: 100vh;
+    min-height:100vh;
+    height: 100vh;
     background: #90CCF4;
     padding-top: 50px;
 

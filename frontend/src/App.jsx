@@ -1,25 +1,21 @@
 import './App.css';
 import React from 'react';
-import { useRef } from 'react';
-import styled, { keyframes } from 'styled-components';
-import Home from './Pages/Home'
-import Portfolio from './Pages/Portfolio'
-import Contact from './Pages/Contact'
 
+import { BrowserRouter } from "react-router-dom";
+import PageRoutes from "./Pages/PageRoutes";
 
+import NavbarMain from "./Components/NavbarMain"
 
 function App() {
-   const portfolioRef = useRef(null);
-   const contactRef = useRef(null);
 
-   const portfolioScroll = () => portfolioRef.current.scrollIntoView({behavior: "smooth"})
-   const contactScroll = () => contactRef.current.scrollIntoView({behavior: "smooth"})  
   return (
  
     <>
-
-  <Home portfolioScroll={portfolioScroll} contactScroll={contactScroll} ></Home>
-
+	    <BrowserRouter>
+        <NavbarMain></NavbarMain>
+				<PageRoutes>
+        </PageRoutes>
+			</BrowserRouter>
     </>  
   );
 }

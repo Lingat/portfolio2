@@ -2,22 +2,24 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
 import { fadeIn, bounceIn, bounceInLeft } from 'react-animations';
+import { useNavigate } from 'react-router';
 
 const bilAnimation = keyframes`${bounceInLeft}`;
 const fadeAnimation = keyframes`${fadeIn}`;
 
 
-
+/*
+  Should I change this?
+*/
 const MainDiv = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-min-height:100vh;
-height: 100vh;
-
+    min-height:100vh;
+    height: 100vh;
 `
 const TopDiv = styled.div`
-    padding: 10px;
+    padding: 5px;
     height: 60%;
     animation: 1s ${fadeAnimation};
 
@@ -39,17 +41,18 @@ const ContainedDiv = styled.div`
 
 
 function Home({portfolioScroll, contactScroll}) {
+  const navigate = useNavigate();
   return <MainDiv>
   <TopDiv
   style={{background: "#F78888"}}
   >
-      <h1 className="title" style={{position: "fixed"}}> P<span className="fullName">ierre</span>L<span className="fullName">ingat</span> </h1>
+      
   <TopDiv style={{height: "70%", display: "flex", flexDirection: "column",   alignItems: "center",}}>
     <img style={{ width: "310px", height: "300px"}} src = "ManVespa.png"></img>
   </TopDiv>
   
   <div >
-  <h2 className="link" onClick={portfolioScroll}>Portfolio</h2>
+  <h2 className="link" onClick={() => navigate("/portfolio")}>Portfolio</h2>
   <p> Things I've worked on in the past. </p>
   </div>
 

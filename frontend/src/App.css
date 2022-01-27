@@ -1,55 +1,57 @@
 * {
-  font-family: 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
+    font-family: 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
 body {
-  color: black;
-  background: #ECECEC;
-  
+    color: black;
+    background: #ececec;
 }
 
-html, body {margin: 0; height: 100%; overflow: hidden}
+html,
+body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
 
 .title:hover .fullName {
-  opacity: 1;
-  transition: font-size 0.3s, opacity 0.3s linear;
-  font-size: 35px;
-}
-.fullName:hover {
-  opacity: 1;
-  transition: opacity 0.3s linear;
-}
-.fullName {
-  transition: font-size 0.3s, display 0s, opacity 0.3s linear;
-  opacity: 0;
-  width: 0px;
-  font-size: 0px;
+    transition: font-size 0.3s, opacity 0.3s linear;
+    font-size: 35px;
 }
 
-.title{
-  opacity: 1;
-  transition: 0.3s;
-  cursor: pointer;
+.fullName:hover {
+    opacity: 1;
+    transition: opacity 0.3s linear;
+}
+
+.fullName {
+    transition: font-size 0.3s;
+    font-size: 0px;
+}
+
+.title {
+    cursor: pointer;
+    margin-left: 20px;
+    z-index: 1;
+    position: absolute;
 }
 
 .link {
-  width: 100px;
-  transition: 0.3s;
-  cursor: pointer;
-  transition: transform 250ms;
-
+    width: 100px;
+    transition: 0.3s;
+    cursor: pointer;
+    transition: transform 250ms;
 }
-.link:hover  {
-  transition: 0.3;
-  transform: translateX(10px);
+
+.link:hover {
+    transition: 0.3;
+    transform: translateX(10px);
 }
 
 h1 {
-  font-size: 35px;
+    font-size: 35px;
 }
 
 h2 {
-  font-size: 30px;
+    font-size: 30px;
 }
