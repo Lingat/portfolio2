@@ -12,12 +12,15 @@ to {top: -40px;}
 const Title = styled.div`
     left: 10px;
 
+    top: 20px;
+
 
 `
 
 function NavbarMain(props) {
+  const navigate = useNavigate();
   return <>
-  <Title className="title">
+  <Title onClick={()=> navigate("/") } className="title">
   <h1 >P
   <span className="fullName">ierre</span>
   L<span className="fullName">ingat</span>

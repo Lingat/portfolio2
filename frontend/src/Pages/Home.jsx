@@ -19,7 +19,7 @@ const MainDiv = styled.div`
     height: 100vh;
 `
 const TopDiv = styled.div`
-    padding: 5px;
+    padding: 10px;
     height: 60%;
     animation: 1s ${fadeAnimation};
 
@@ -35,8 +35,16 @@ const BottomDiv = styled.div`
 const ContainedDiv = styled.div`
     width: 50%;
     padding: 10px;
+
     display: flex;
     flex-direction: column;
+
+`
+
+const TextDiv = styled.div`
+  justify-self: end;
+  margin-top: 50px;
+
 `
 
 
@@ -44,39 +52,39 @@ function Home({portfolioScroll, contactScroll}) {
   const navigate = useNavigate();
   return <MainDiv>
   <TopDiv
-  style={{background: "#F78888"}}
+  style={{background: "#A8D0E6"}}
   >
       
   <TopDiv style={{height: "70%", display: "flex", flexDirection: "column",   alignItems: "center",}}>
-    <img style={{ width: "310px", height: "300px"}} src = "ManVespa.png"></img>
+    <img style={{ width: "300px", height: "300px"}} src = "elipseman.png"></img>
   </TopDiv>
   
-  <div >
+  <TextDiv>
   <h2 className="link" onClick={() => navigate("/portfolio")}>Portfolio</h2>
   <p> Things I've worked on in the past. </p>
-  </div>
+  </TextDiv>
 
   </TopDiv>
 
 
   <BottomDiv>
-    <ContainedDiv style={{background: "#F3D250"}}>
+    <ContainedDiv style={{background: "#24305E"}}>
         <TopDiv style={{ display: "flex", flexDirection: "column",   alignItems: "center",}}>
     <img style={{ width: "300px", height: "300px"}} src = "elipseman.png"></img>
   </TopDiv>
-        <div>
+        <TextDiv>
         <h2 className="link"> Resume </h2>
         <p> Check out my work experience! </p>
-        </div>
+        </TextDiv>
     </ContainedDiv>
-    <ContainedDiv style={{background: "#90CCF4"}}>
+    <ContainedDiv style={{background: "#F76C6C"}}>
         <TopDiv style={{ display: "flex", flexDirection: "column",   alignItems: "center",}}>
-    <img style={{ paddingTop: "60px", width: "150px", height: "150px"}} src = "email.png"></img>
+    <img style={{  width: "300px", height: "300px"}} src = "elipseman.png"></img>
   </TopDiv>
-        <div>
+        <TextDiv>
         <h2 className="link" onClick={contactScroll}>  Contact </h2>
         <p> Interested? Let's work together. </p>
-        </div>
+        </TextDiv>
     
     </ContainedDiv>
   </BottomDiv>

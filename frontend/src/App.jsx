@@ -5,6 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import PageRoutes from "./Pages/PageRoutes";
 
 import NavbarMain from "./Components/NavbarMain"
+import  'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 
