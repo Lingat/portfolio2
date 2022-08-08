@@ -1,0 +1,71 @@
+@import 'custom.scss';
+.navbar {
+    margin-bottom: 0 !important;
+    opacity: 0.8 !important;
+    background-color: none !important;
+}
+
+.navbarWrapper {
+    opacity: 0.8 !important;
+    background-color: none !important;
+    .title {
+        cursor: pointer;
+        font-weight: 900 !important;
+        text-transform: capitalize !important;
+        margin-top: 10px;
+        color: $primary;
+    }
+    .titleWrapper {
+        width: 95%;
+        height: 100%;
+        left: 0;
+        text-align: center;
+        justify-self: center;
+        margin: 0 auto;
+        right: 0;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        z-index: 0;
+        width: 20%;
+    }
+}
+
+.link {
+    opacity: 0.6 !important;
+    transition: all 0.9s ease;
+    cursor: pointer;
+}
+
+.link:hover {
+    opacity: 1 !important;
+    transition: all 0.9s ease;
+}
+
+* {
+    font-family: Roboto;
+}
+
+h1 {
+    font-weight: 900 !important;
+    font-size: 50px !important;
+}
+
+h2 {
+    font-weight: 300 !important;
+}
+
+.subtitle {
+    font-weight: 300;
+}
+
+body {
+    background: url('http://12dishes.com/assets/images/noise-pattern.png');
+}
+
+.fadeIn {
+    opacity: 1 !important;
+    transition: opacity 1s ease-in;
+}

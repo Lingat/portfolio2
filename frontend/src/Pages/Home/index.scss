@@ -1,0 +1,82 @@
+@import '../../colors.scss';
+.mainWrapper {
+    display: flex;
+    flex-direction: justify;
+    margin: 0;
+}
+
+.photoWrapper {
+    width: 50%;
+    height: 100vh;
+    border-top: 1px solid $primary;
+}
+
+.mainPhoto {
+    width: 100%;
+    height: 100%;
+}
+
+.textWrapper {
+    width: 50%;
+    height: 100vh;
+    border-left: 1px solid $primary;
+    border-top: 1px solid $primary;
+    padding-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    .textInfo {
+        margin-top: -10%;
+        text-align: center;
+        align-self: center;
+        width: 80%;
+    }
+    .homeBtns {
+        width: 150px;
+    }
+    button:hover {
+        color: white !important;
+    }
+}
+
+
+/* ANIMATIONS */
+
+.photo {
+    width: 100%;
+    height: 100%;
+}
+
+.photoEnter {
+    opacity: 1;
+    transition: opacity 800ms ease;
+}
+
+.photoExit {
+    opacity: 0;
+    transition: opacity 800ms ease;
+}
+
+
+/* MOBILE */
+
+@media only screen and (max-width: 600px) {
+    .mainWrapper {
+        flex-direction: column;
+        height: 80vh;
+    }
+    .photoWrapper {
+        display: none;
+    }
+    .textWrapper {
+        width: 100%;
+        justify-content: center;
+        align-content: flex-start;
+        .textInfo {
+            margin-top: 20%;
+            text-align: center;
+            align-self: flex-start;
+            width: 80%;
+        }
+    }
+}
