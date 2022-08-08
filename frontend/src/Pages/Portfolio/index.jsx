@@ -7,8 +7,7 @@ const dummyProjects = {
         {
             name: 'Hello World College',
             image: 'projects/helloworld.png',
-            description:
-                'A freelance project I worked on for a tutoring website.',
+            description: 'A freelance project made for a tutoring website.',
             link: 'https://helloworld.college/',
             date: '20/02/2021',
         },
